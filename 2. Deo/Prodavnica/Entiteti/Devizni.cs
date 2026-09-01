@@ -13,6 +13,9 @@ namespace Prodavnica.Entiteti
         public virtual string Namena { get; set; } // 'ŠTEDNJA' ili 'POSLOVANJE'
         public virtual decimal? KursnaRazlika { get; set; }
 
+        public virtual ICollection<DevizniOgranicenje> DevizniOgranicenja { get; set; } = new List<DevizniOgranicenje>();
+        public virtual ICollection<DevizniValuta> DevizniValute { get; set; } = new List<DevizniValuta>();
+
         public Devizni() { }
     }
 }

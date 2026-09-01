@@ -13,6 +13,8 @@ namespace Prodavnica.Entiteti
         public virtual bool PlatnaKartica { get; set; }
         public virtual decimal? MesecniLimit { get; set; }
 
+        public virtual ICollection<TekuciPaket> TekuciPaketi { get; set; } = new List<TekuciPaket>();
+
         public Tekuci() { }
     }
 }

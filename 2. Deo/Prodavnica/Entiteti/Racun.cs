@@ -27,12 +27,6 @@ namespace Prodavnica.Entiteti
         public virtual Devizni Devizni { get; set; }
         public virtual Ziro Ziro { get; set; }
 
-        public virtual ICollection<TekuciPaket> TekuciPaketi { get; set; } = new List<TekuciPaket>();
-        public virtual ICollection<StedniUsloviPodizanja> StedniUsloviPodizanja { get; set; } = new List<StedniUsloviPodizanja>();
-        public virtual ICollection<StedniBonus> StedniBonusi { get; set; } = new List<StedniBonus>();
-        public virtual ICollection<DevizniOgranicenje> DevizniOgranicenja { get; set; } = new List<DevizniOgranicenje>();
-        public virtual ICollection<DevizniValuta> DevizniValute { get; set; } = new List<DevizniValuta>();
-
         public virtual ICollection<Depozit> Depoziti { get; set; } = new List<Depozit>();
         public virtual ICollection<Kredit> Krediti { get; set; } = new List<Kredit>();
         public virtual ICollection<Transakcija> Transakcije { get; set; } = new List<Transakcija>();

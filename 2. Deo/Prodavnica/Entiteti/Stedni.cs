@@ -13,6 +13,9 @@ namespace Prodavnica.Entiteti
         public virtual decimal? MinimalniIznosOtvaranja { get; set; }
         public virtual int FrekvKapitalizKamate { get; set; } // 365, 12, 4, 2, 1
 
+        public virtual ICollection<StedniUsloviPodizanja> StedniUsloviPodizanja { get; set; } = new List<StedniUsloviPodizanja>();
+        public virtual ICollection<StedniBonus> StedniBonusi { get; set; } = new List<StedniBonus>();
+
         public Stedni() { }
     }
 }
