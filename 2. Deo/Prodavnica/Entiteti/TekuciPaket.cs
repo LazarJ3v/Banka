@@ -11,7 +11,7 @@ namespace Prodavnica.Entiteti
         public virtual int Id { get; set; }
         public virtual string Paket { get; set; }
         public virtual int RacunId { get; set; }
-        public virtual Racun Racun { get; set; }
+        public virtual Tekuci Tekuci { get; set; }
 
         public TekuciPaket() { }
     }

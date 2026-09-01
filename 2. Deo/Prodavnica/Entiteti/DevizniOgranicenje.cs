@@ -11,7 +11,7 @@ namespace Prodavnica.Entiteti
         public virtual int Id { get; set; }
         public virtual string Ogranicenje { get; set; }
         public virtual int RacunId { get; set; }
-        public virtual Racun Racun { get; set; }
+        public virtual Devizni Devizni { get; set; }
 
         public DevizniOgranicenje() { }
     }
