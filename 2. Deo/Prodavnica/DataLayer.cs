@@ -39,7 +39,8 @@ namespace Prodavnica
                 var cfg = OracleManagedDataClientConfiguration.Oracle10
                 .ShowSql()
                 .ConnectionString(c =>
-                    c.Is("Data Source=gislab-oracle.elfak.ni.ac.rs:1521/SBP_PDB;User Id=prodavnica;Password=prodavnica"));
+                    //c.Is("Data Source=gislab-oracle.elfak.ni.ac.rs:1521/SBP_PDB;User Id=S19658;Password=AleksaSBP26_"));
+                    c.Is("Data Source=localhost:1521/FREEPDB1;User Id=aleksa;Password=aleksa"));
 
                 return Fluently.Configure()
                     .Database(cfg)
@@ -48,7 +49,7 @@ namespace Prodavnica
             }
             catch (Exception ec)
             {
-                System.Windows.Forms.MessageBox.Show(ec.Message);
+                System.Windows.Forms.MessageBox.Show(ec.ToString());
                 return null;
             }
 

@@ -27,15 +27,26 @@ namespace Prodavnica
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Prodavnica.Entiteti.Prodavnica p = s.Load<Prodavnica.Entiteti.Prodavnica>(61);
+                Prodavnica.Entiteti.Racun r = s.Load<Prodavnica.Entiteti.Racun>(1);
 
-                MessageBox.Show(p.Naziv);
+                string poruka = $"Id: {r.Id}\n" +
+                         $"BrojRacuna: {r.BrojRacuna}\n" +
+                         $"Valuta: {r.Valuta}\n" +
+                         $"TrenutnoStanje: {r.TrenutnoStanje}\n" +
+                         $"DatumOtvaranja: {r.DatumOtvaranja}\n" +
+                         $"Status: {r.Status}\n" +
+                         $"DozvoljeniMinus: {r.DozvoljeniMinus}\n" +
+                         $"Komentar: {r.Komentar}\n" +
+                         $"TipRacuna: {r.TipRacuna}\n" +
+                         $"KamatnaStopa: {r.KamatnaStopa}";
+
+                MessageBox.Show(poruka);
 
                 s.Close();
             }
             catch (Exception ec)
             {
-                MessageBox.Show(ec.Message);
+                MessageBox.Show(ec.ToString());
             }
         }
 
@@ -46,14 +57,11 @@ namespace Prodavnica
                 ISession s = DataLayer.GetSession();
 
 
-                Entiteti.Prodavnica p = new Entiteti.Prodavnica();
-           
-                p.Naziv = "Emmi Shop VII";
-                p.RadniDan = "08-20";
-                p.Subota = "08-14";
-                p.Nedelja = "Ne radi";
+                Entiteti.Racun r = new Entiteti.Racun();
 
-                s.Save(p);
+
+
+                s.Save(r);
 
                 s.Flush();
                 s.Close();

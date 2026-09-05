@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prodavnica.Entiteti
 {
-    public class Ziro
+    public class Ziro : Racun
     {
         public virtual int RacunId { get; set; }
         public virtual Racun Racun { get; set; }

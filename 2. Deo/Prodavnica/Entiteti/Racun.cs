@@ -22,11 +22,6 @@ namespace Prodavnica.Entiteti
         public virtual FizickoLice FizickoLice { get; set; }
         public virtual PravnoLice PravnoLice { get; set; }
 
-        public virtual Tekuci Tekuci { get; set; }
-        public virtual Stedni Stedni { get; set; }
-        public virtual Devizni Devizni { get; set; }
-        public virtual Ziro Ziro { get; set; }
-
         public virtual ICollection<Depozit> Depoziti { get; set; } = new List<Depozit>();
         public virtual ICollection<Kredit> Krediti { get; set; } = new List<Kredit>();
         public virtual ICollection<Transakcija> Transakcije { get; set; } = new List<Transakcija>();

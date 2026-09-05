@@ -28,107 +28,223 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PocetnaStranica));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnProdavnice = new System.Windows.Forms.Button();
-            this.btnZaposleni = new System.Windows.Forms.Button();
-            this.btnIgracke = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            btnRacuni = new Button();
+            btnKlijenti = new Button();
+            btnTransakcije = new Button();
+            btnKrediti = new Button();
+            btnDepoziti = new Button();
+            btnKamate = new Button();
+            btnSigurnosneKontrole = new Button();
+            panel1 = new Panel();
+            infoKrediti = new Label();
+            infoTransakcije = new Label();
+            infoRacuni = new Label();
+            infoKlijenti = new Label();
+            lblKrediti = new Label();
+            lblTransakcije = new Label();
+            lblRacuni = new Label();
+            lblKlijenti = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
-            // pictureBox1
+            // btnRacuni
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(136, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(303, 242);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            btnRacuni.BackColor = SystemColors.GradientInactiveCaption;
+            btnRacuni.Location = new Point(271, 169);
+            btnRacuni.Name = "btnRacuni";
+            btnRacuni.Size = new Size(256, 64);
+            btnRacuni.TabIndex = 0;
+            btnRacuni.Text = "Računi";
+            btnRacuni.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // btnKlijenti
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 261);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(435, 82);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LANAC PRODAVNICA\r\n        IGRACAKA";
+            btnKlijenti.BackColor = SystemColors.GradientInactiveCaption;
+            btnKlijenti.Location = new Point(9, 169);
+            btnKlijenti.Name = "btnKlijenti";
+            btnKlijenti.Size = new Size(256, 64);
+            btnKlijenti.TabIndex = 1;
+            btnKlijenti.Text = "Klijenti";
+            btnKlijenti.UseVisualStyleBackColor = false;
+            btnKlijenti.Click += btnKlijenti_Click;
             // 
-            // btnProdavnice
+            // btnTransakcije
             // 
-            this.btnProdavnice.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnProdavnice.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProdavnice.Location = new System.Drawing.Point(136, 365);
-            this.btnProdavnice.Margin = new System.Windows.Forms.Padding(4);
-            this.btnProdavnice.Name = "btnProdavnice";
-            this.btnProdavnice.Size = new System.Drawing.Size(303, 70);
-            this.btnProdavnice.TabIndex = 2;
-            this.btnProdavnice.Text = "Prodavnice";
-            this.btnProdavnice.UseVisualStyleBackColor = false;
-            this.btnProdavnice.Click += new System.EventHandler(this.btnProdavnice_Click);
+            btnTransakcije.BackColor = SystemColors.GradientInactiveCaption;
+            btnTransakcije.Location = new Point(533, 169);
+            btnTransakcije.Name = "btnTransakcije";
+            btnTransakcije.Size = new Size(256, 64);
+            btnTransakcije.TabIndex = 2;
+            btnTransakcije.Text = "Transakcije";
+            btnTransakcije.UseVisualStyleBackColor = false;
             // 
-            // btnZaposleni
+            // btnKrediti
             // 
-            this.btnZaposleni.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnZaposleni.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZaposleni.Location = new System.Drawing.Point(136, 443);
-            this.btnZaposleni.Margin = new System.Windows.Forms.Padding(4);
-            this.btnZaposleni.Name = "btnZaposleni";
-            this.btnZaposleni.Size = new System.Drawing.Size(303, 70);
-            this.btnZaposleni.TabIndex = 3;
-            this.btnZaposleni.Text = "Zaposleni";
-            this.btnZaposleni.UseVisualStyleBackColor = false;
-            this.btnZaposleni.Click += new System.EventHandler(this.btnZaposleni_Click);
+            btnKrediti.BackColor = SystemColors.GradientInactiveCaption;
+            btnKrediti.Location = new Point(9, 239);
+            btnKrediti.Name = "btnKrediti";
+            btnKrediti.Size = new Size(256, 64);
+            btnKrediti.TabIndex = 3;
+            btnKrediti.Text = "Krediti";
+            btnKrediti.UseVisualStyleBackColor = false;
             // 
-            // btnIgracke
+            // btnDepoziti
             // 
-            this.btnIgracke.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnIgracke.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIgracke.Location = new System.Drawing.Point(136, 521);
-            this.btnIgracke.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIgracke.Name = "btnIgracke";
-            this.btnIgracke.Size = new System.Drawing.Size(303, 70);
-            this.btnIgracke.TabIndex = 4;
-            this.btnIgracke.Text = "Igracke";
-            this.btnIgracke.UseVisualStyleBackColor = false;
-            this.btnIgracke.Click += new System.EventHandler(this.btnIgracke_Click);
+            btnDepoziti.BackColor = SystemColors.GradientInactiveCaption;
+            btnDepoziti.Location = new Point(271, 239);
+            btnDepoziti.Name = "btnDepoziti";
+            btnDepoziti.Size = new Size(256, 64);
+            btnDepoziti.TabIndex = 4;
+            btnDepoziti.Text = "Depoziti";
+            btnDepoziti.UseVisualStyleBackColor = false;
+            // 
+            // btnKamate
+            // 
+            btnKamate.BackColor = SystemColors.GradientInactiveCaption;
+            btnKamate.Location = new Point(533, 239);
+            btnKamate.Name = "btnKamate";
+            btnKamate.Size = new Size(256, 64);
+            btnKamate.TabIndex = 5;
+            btnKamate.Text = "Kamate";
+            btnKamate.UseVisualStyleBackColor = false;
+            // 
+            // btnSigurnosneKontrole
+            // 
+            btnSigurnosneKontrole.BackColor = SystemColors.GradientInactiveCaption;
+            btnSigurnosneKontrole.Location = new Point(9, 309);
+            btnSigurnosneKontrole.Name = "btnSigurnosneKontrole";
+            btnSigurnosneKontrole.Size = new Size(780, 64);
+            btnSigurnosneKontrole.TabIndex = 6;
+            btnSigurnosneKontrole.Text = "Sigurnosne Kontrole";
+            btnSigurnosneKontrole.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.InactiveCaption;
+            panel1.Controls.Add(infoKrediti);
+            panel1.Controls.Add(infoTransakcije);
+            panel1.Controls.Add(infoRacuni);
+            panel1.Controls.Add(infoKlijenti);
+            panel1.Controls.Add(lblKrediti);
+            panel1.Controls.Add(lblTransakcije);
+            panel1.Controls.Add(lblRacuni);
+            panel1.Controls.Add(lblKlijenti);
+            panel1.Location = new Point(0, 386);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(803, 64);
+            panel1.TabIndex = 7;
+            // 
+            // infoKrediti
+            // 
+            infoKrediti.AutoSize = true;
+            infoKrediti.Location = new Point(700, 21);
+            infoKrediti.Name = "infoKrediti";
+            infoKrediti.Size = new Size(76, 23);
+            infoKrediti.TabIndex = 7;
+            infoKrediti.Text = "111111";
+            // 
+            // infoTransakcije
+            // 
+            infoTransakcije.AutoSize = true;
+            infoTransakcije.Location = new Point(519, 21);
+            infoTransakcije.Name = "infoTransakcije";
+            infoTransakcije.Size = new Size(76, 23);
+            infoTransakcije.TabIndex = 6;
+            infoTransakcije.Text = "111111";
+            // 
+            // infoRacuni
+            // 
+            infoRacuni.AutoSize = true;
+            infoRacuni.Location = new Point(292, 21);
+            infoRacuni.Name = "infoRacuni";
+            infoRacuni.Size = new Size(76, 23);
+            infoRacuni.TabIndex = 5;
+            infoRacuni.Text = "111111";
+            // 
+            // infoKlijenti
+            // 
+            infoKlijenti.AutoSize = true;
+            infoKlijenti.Location = new Point(112, 21);
+            infoKlijenti.Name = "infoKlijenti";
+            infoKlijenti.Size = new Size(76, 23);
+            infoKlijenti.TabIndex = 4;
+            infoKlijenti.Text = "111111";
+            // 
+            // lblKrediti
+            // 
+            lblKrediti.AutoSize = true;
+            lblKrediti.Location = new Point(610, 21);
+            lblKrediti.Name = "lblKrediti";
+            lblKrediti.Size = new Size(98, 23);
+            lblKrediti.TabIndex = 3;
+            lblKrediti.Text = "Krediti:";
+            // 
+            // lblTransakcije
+            // 
+            lblTransakcije.AutoSize = true;
+            lblTransakcije.Location = new Point(385, 21);
+            lblTransakcije.Name = "lblTransakcije";
+            lblTransakcije.Size = new Size(142, 23);
+            lblTransakcije.TabIndex = 2;
+            lblTransakcije.Text = "Transakcije:";
+            // 
+            // lblRacuni
+            // 
+            lblRacuni.AutoSize = true;
+            lblRacuni.Location = new Point(210, 21);
+            lblRacuni.Name = "lblRacuni";
+            lblRacuni.Size = new Size(87, 23);
+            lblRacuni.TabIndex = 1;
+            lblRacuni.Text = "Računi:";
+            // 
+            // lblKlijenti
+            // 
+            lblKlijenti.AutoSize = true;
+            lblKlijenti.Location = new Point(10, 21);
+            lblKlijenti.Name = "lblKlijenti";
+            lblKlijenti.Size = new Size(109, 23);
+            lblKlijenti.TabIndex = 0;
+            lblKlijenti.Text = "Klijenti:";
             // 
             // PocetnaStranica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(582, 653);
-            this.Controls.Add(this.btnIgracke);
-            this.Controls.Add(this.btnZaposleni);
-            this.Controls.Add(this.btnProdavnice);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(600, 700);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(600, 700);
-            this.Name = "PocetnaStranica";
-            this.Text = "POCETNA STRANICA";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(11F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(804, 450);
+            Controls.Add(panel1);
+            Controls.Add(btnSigurnosneKontrole);
+            Controls.Add(btnKamate);
+            Controls.Add(btnDepoziti);
+            Controls.Add(btnKrediti);
+            Controls.Add(btnTransakcije);
+            Controls.Add(btnKlijenti);
+            Controls.Add(btnRacuni);
+            Name = "PocetnaStranica";
+            Text = "BANKA - Upravljanje poslovanjem";
+            Load += PocetnaStranica_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnProdavnice;
-        private System.Windows.Forms.Button btnZaposleni;
-        private System.Windows.Forms.Button btnIgracke;
+        private Button btnRacuni;
+        private Button btnKlijenti;
+        private Button btnTransakcije;
+        private Button btnKrediti;
+        private Button btnDepoziti;
+        private Button btnKamate;
+        private Button btnSigurnosneKontrole;
+        private Panel panel1;
+        private Label lblKlijenti;
+        private Label lblKrediti;
+        private Label lblTransakcije;
+        private Label lblRacuni;
+        private Label infoKrediti;
+        private Label infoTransakcije;
+        private Label infoRacuni;
+        private Label infoKlijenti;
     }
 }

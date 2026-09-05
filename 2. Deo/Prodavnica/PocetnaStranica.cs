@@ -5,7 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using NHibernate;
+using NHibernate.Criterion;
 
 namespace Prodavnica
 {
@@ -16,22 +19,32 @@ namespace Prodavnica
             InitializeComponent();
         }
 
-        private void btnProdavnice_Click(object sender, EventArgs e)
+        private void PocetnaStranica_Load(object sender, EventArgs e)
         {
-            ProdavniceForm forma = new ProdavniceForm();
-            forma.ShowDialog();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                int pl = s.QueryOver<Entiteti.PravnoLice>().RowCount();
+                int fl = s.QueryOver<Entiteti.FizickoLice>().RowCount();
+                infoKlijenti.Text = (pl + fl).ToString();
+                infoRacuni.Text = s.QueryOver<Entiteti.Racun>().RowCount().ToString();
+                infoTransakcije.Text = s.QueryOver<Entiteti.Transakcija>().RowCount().ToString();
+                infoKrediti.Text = s.QueryOver<Entiteti.Kredit>().RowCount().ToString();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+
         }
 
-        private void btnZaposleni_Click(object sender, EventArgs e)
+        private void btnKlijenti_Click(object sender, EventArgs e)
         {
-            SviZaposleniForma forma = new SviZaposleniForma();
-            forma.ShowDialog();
-        }
-
-        private void btnIgracke_Click(object sender, EventArgs e)
-        {
-            SviProizvodiForma forma = new SviProizvodiForma();
-            forma.ShowDialog();
+            Forme.KlijentiPregled forma = new Forme.KlijentiPregled();
+            forma.Show();
         }
     }
 }
