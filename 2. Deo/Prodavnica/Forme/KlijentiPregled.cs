@@ -46,22 +46,25 @@ namespace Prodavnica.Forme
                     fl.Komentar
                 )).ToList();
 
-                // Isključujemo automatsko generisanje kolona
                 dgvFizickaLica.AutoGenerateColumns = false;
-
-                // Povezujemo postojeće kolone sa property-jima
-                dgvFizickaLica.Columns["colIme"].DataPropertyName = "Ime";
-                dgvFizickaLica.Columns["colPrezime"].DataPropertyName = "Prezime";
-                dgvFizickaLica.Columns["colJmbg"].DataPropertyName = "Jmbg";
-                dgvFizickaLica.Columns["colBrLicne"].DataPropertyName = "BrojLicneKarte";
-                dgvFizickaLica.Columns["colGrad"].DataPropertyName = "Grad";
-                dgvFizickaLica.Columns["colTelefon"].DataPropertyName = "Telefon";
-                dgvFizickaLica.Columns["colEmail"].DataPropertyName = "Email";
-                dgvFizickaLica.Columns["colStatus"].DataPropertyName = "Status";
-
-                // Bindujemo podatke
                 dgvFizickaLica.DataSource = null;
-                dgvFizickaLica.DataSource = fizickoPregled;
+                dgvFizickaLica.Rows.Clear();
+
+                foreach (var fl in fizickoPregled)
+                {
+                    int rowIndex = dgvFizickaLica.Rows.Add();
+                    var row = dgvFizickaLica.Rows[rowIndex];
+
+                    row.Cells["colIme"].Value = fl.ToString();
+                    row.Cells["colJmbg"].Value = fl.Jmbg;
+                    row.Cells["colBrLicne"].Value = fl.BrojLicneKarte;
+                    row.Cells["colGrad"].Value = fl.Grad;
+                    row.Cells["colTelefon"].Value = fl.Telefon;
+                    row.Cells["colEmail"].Value = fl.Email;
+                    row.Cells["colStatus"].Value = fl.Status;
+
+                    row.Tag = fl; // omogućava kasniji pristup celom objektu preko reda
+                }
 
                 // ==========================================
                 // PRAVNA LICA - povezujemo postojeće kolone
@@ -78,21 +81,25 @@ namespace Prodavnica.Forme
                     pl.Komentar
                 )).ToList();
 
-                // Isključujemo automatsko generisanje kolona
                 dgvPravnaLica.AutoGenerateColumns = false;
-
-                // Povezujemo postojeće kolone sa property-jima
-                dgvPravnaLica.Columns["colNazivFirme"].DataPropertyName = "NazivFirme";
-                dgvPravnaLica.Columns["colPib"].DataPropertyName = "Pib";
-                dgvPravnaLica.Columns["colAdresa"].DataPropertyName = "Adresa";
-                dgvPravnaLica.Columns["colGrad2"].DataPropertyName = "Grad";
-                dgvPravnaLica.Columns["colTelefon2"].DataPropertyName = "Telefon";
-                dgvPravnaLica.Columns["colEmail2"].DataPropertyName = "Email";
-                dgvPravnaLica.Columns["colStatus2"].DataPropertyName = "Status";
-
-                // Bindujemo podatke
                 dgvPravnaLica.DataSource = null;
-                dgvPravnaLica.DataSource = pravnoPregled;
+                dgvPravnaLica.Rows.Clear();
+
+                foreach (var pl in pravnoPregled)
+                {
+                    int rowIndex = dgvPravnaLica.Rows.Add();
+                    var row = dgvPravnaLica.Rows[rowIndex];
+
+                    row.Cells["colNazivFirme"].Value = pl.NazivFirme;
+                    row.Cells["colPib"].Value = pl.Pib;
+                    row.Cells["colAdresa"].Value = pl.Adresa;
+                    row.Cells["colGrad2"].Value = pl.Grad;
+                    row.Cells["colTelefon2"].Value = pl.Telefon;
+                    row.Cells["colEmail2"].Value = pl.Email;
+                    row.Cells["colStatus2"].Value = pl.Status;
+
+                    row.Tag = pl;
+                }
 
                 // ==========================================
                 // AUTOMATSKI RESIZE

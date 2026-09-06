@@ -54,7 +54,6 @@
             label1 = new Label();
             lblInfo = new Label();
             colIme = new DataGridViewTextBoxColumn();
-            colPrezime = new DataGridViewTextBoxColumn();
             colJmbg = new DataGridViewTextBoxColumn();
             colBrLicne = new DataGridViewTextBoxColumn();
             colGrad = new DataGridViewTextBoxColumn();
@@ -192,9 +191,10 @@
             // 
             // dgvFizickaLica
             // 
+            dgvFizickaLica.AllowUserToAddRows = false;
             dgvFizickaLica.BackgroundColor = SystemColors.GradientInactiveCaption;
             dgvFizickaLica.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFizickaLica.Columns.AddRange(new DataGridViewColumn[] { colIme, colPrezime, colJmbg, colBrLicne, colGrad, colTelefon, colEmail, colStatus });
+            dgvFizickaLica.Columns.AddRange(new DataGridViewColumn[] { colIme, colJmbg, colBrLicne, colGrad, colTelefon, colEmail, colStatus });
             dgvFizickaLica.Location = new Point(6, 22);
             dgvFizickaLica.Name = "dgvFizickaLica";
             dgvFizickaLica.RowHeadersWidth = 62;
@@ -213,6 +213,7 @@
             // 
             // dgvPravnaLica
             // 
+            dgvPravnaLica.AllowUserToAddRows = false;
             dgvPravnaLica.BackgroundColor = SystemColors.GradientInactiveCaption;
             dgvPravnaLica.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPravnaLica.Columns.AddRange(new DataGridViewColumn[] { colNazivFirme, colPib, colAdresa, colGrad2, colTelefon2, colEmail2, colStatus2 });
@@ -295,13 +296,6 @@
             colIme.MinimumWidth = 8;
             colIme.Name = "colIme";
             colIme.Width = 150;
-            // 
-            // colPrezime
-            // 
-            colPrezime.HeaderText = "Prezime";
-            colPrezime.MinimumWidth = 8;
-            colPrezime.Name = "colPrezime";
-            colPrezime.Width = 150;
             // 
             // colJmbg
             // 
@@ -406,7 +400,6 @@
         private Label label1;
         private Label lblInfo;
         private DataGridViewTextBoxColumn colIme;
-        private DataGridViewTextBoxColumn colPrezime;
         private DataGridViewTextBoxColumn colJmbg;
         private DataGridViewTextBoxColumn colBrLicne;
         private DataGridViewTextBoxColumn colGrad;
