@@ -227,6 +227,39 @@ namespace Prodavnica.Forme
             rdb.Font = new Font("Segoe UI", 9);
         }
 
+        // ==========================================
+        // DATE TIME PICKER
+        // ==========================================
+        protected void StilizujDateTimePicker(DateTimePicker dtp)
+        {
+            dtp.Font = new Font("Segoe UI", 9);
+            dtp.CalendarFont = new Font("Segoe UI", 9);
+            dtp.Format = DateTimePickerFormat.Custom;
+            dtp.CustomFormat = "dd-MM-yyyy";
+
+            // Boje same kontrole (WinForms ograničeno podržava custom BackColor/ForeColor
+            // na DateTimePicker-u dok je Format = Long/Short, ali postavljamo radi konzistentnosti)
+            dtp.CalendarForeColor = TekstBoja;
+            dtp.CalendarMonthBackground = BojaSrednja;
+            dtp.CalendarTitleBackColor = BojaTamna;
+            dtp.CalendarTitleForeColor = TekstBoja;
+            dtp.CalendarTrailingForeColor = TekstBojaSekundarna;
+        }
+
+        // ==========================================
+        // RICH TEXT BOX
+        // ==========================================
+        protected void StilizujRichTextBox(RichTextBox rtb)
+        {
+            rtb.BorderStyle = BorderStyle.FixedSingle;
+            rtb.BackColor = BojaSrednja;
+            rtb.ForeColor = TekstBoja;
+            rtb.Font = new Font("Segoe UI", 9);
+
+            // Da boja selekcije teksta prati temu
+            rtb.SelectionColor = TekstBoja;
+        }
+
         protected void StilizujButton(params Button[] prms)
         {
             foreach (Button btn in prms)
@@ -312,6 +345,22 @@ namespace Prodavnica.Forme
             foreach(RadioButton rb in prms)
             {
                 StilizujRadioButton(rb);
+            }
+        }
+
+        protected void StilizujDateTimePicker(params DateTimePicker[] prms)
+        {
+            foreach(DateTimePicker dtp in prms)
+            {
+                StilizujDateTimePicker(dtp);
+            }
+        }
+
+        protected void StilizujRichTextBox(params RichTextBox[] prms)
+        {
+            foreach(RichTextBox rtb in prms)
+            {
+                StilizujRichTextBox(rtb);
             }
         }
     }

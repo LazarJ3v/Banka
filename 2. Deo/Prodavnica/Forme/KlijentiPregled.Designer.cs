@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             lblEmail = new Label();
             txtBoxPretraga = new TextBox();
             lblTipKlijenta = new Label();
@@ -76,10 +76,9 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.ForeColor = Color.White;
-            lblEmail.Location = new Point(11, 20);
-            lblEmail.Margin = new Padding(2, 0, 2, 0);
+            lblEmail.Location = new Point(16, 33);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(39, 15);
+            lblEmail.Size = new Size(58, 25);
             lblEmail.TabIndex = 0;
             lblEmail.Text = "Email:";
             // 
@@ -88,20 +87,18 @@
             txtBoxPretraga.BackColor = Color.FromArgb(51, 51, 51);
             txtBoxPretraga.BorderStyle = BorderStyle.FixedSingle;
             txtBoxPretraga.ForeColor = Color.White;
-            txtBoxPretraga.Location = new Point(55, 18);
-            txtBoxPretraga.Margin = new Padding(2);
+            txtBoxPretraga.Location = new Point(79, 30);
             txtBoxPretraga.Name = "txtBoxPretraga";
-            txtBoxPretraga.Size = new Size(101, 23);
+            txtBoxPretraga.Size = new Size(143, 31);
             txtBoxPretraga.TabIndex = 1;
             // 
             // lblTipKlijenta
             // 
             lblTipKlijenta.AutoSize = true;
             lblTipKlijenta.ForeColor = Color.White;
-            lblTipKlijenta.Location = new Point(23, 48);
-            lblTipKlijenta.Margin = new Padding(2, 0, 2, 0);
+            lblTipKlijenta.Location = new Point(33, 80);
             lblTipKlijenta.Name = "lblTipKlijenta";
-            lblTipKlijenta.Size = new Size(27, 15);
+            lblTipKlijenta.Size = new Size(40, 25);
             lblTipKlijenta.TabIndex = 2;
             lblTipKlijenta.Text = "Tip:";
             // 
@@ -111,20 +108,18 @@
             cmbTip.FlatStyle = FlatStyle.Flat;
             cmbTip.ForeColor = Color.White;
             cmbTip.FormattingEnabled = true;
-            cmbTip.Location = new Point(55, 45);
-            cmbTip.Margin = new Padding(2);
+            cmbTip.Location = new Point(79, 75);
             cmbTip.Name = "cmbTip";
-            cmbTip.Size = new Size(101, 23);
+            cmbTip.Size = new Size(143, 33);
             cmbTip.TabIndex = 3;
             // 
             // lblStatus
             // 
             lblStatus.AutoSize = true;
             lblStatus.ForeColor = Color.White;
-            lblStatus.Location = new Point(8, 75);
-            lblStatus.Margin = new Padding(2, 0, 2, 0);
+            lblStatus.Location = new Point(11, 125);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(42, 15);
+            lblStatus.Size = new Size(64, 25);
             lblStatus.TabIndex = 4;
             lblStatus.Text = "Status:";
             // 
@@ -134,10 +129,9 @@
             cmbStatus.FlatStyle = FlatStyle.Flat;
             cmbStatus.ForeColor = Color.White;
             cmbStatus.FormattingEnabled = true;
-            cmbStatus.Location = new Point(55, 72);
-            cmbStatus.Margin = new Padding(2);
+            cmbStatus.Location = new Point(79, 120);
             cmbStatus.Name = "cmbStatus";
-            cmbStatus.Size = new Size(101, 23);
+            cmbStatus.Size = new Size(143, 33);
             cmbStatus.TabIndex = 5;
             // 
             // btnPretrazi
@@ -146,10 +140,9 @@
             btnPretrazi.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
             btnPretrazi.FlatStyle = FlatStyle.Flat;
             btnPretrazi.ForeColor = Color.White;
-            btnPretrazi.Location = new Point(4, 99);
-            btnPretrazi.Margin = new Padding(2);
+            btnPretrazi.Location = new Point(6, 165);
             btnPretrazi.Name = "btnPretrazi";
-            btnPretrazi.Size = new Size(152, 22);
+            btnPretrazi.Size = new Size(217, 37);
             btnPretrazi.TabIndex = 7;
             btnPretrazi.Text = "Pretraži";
             btnPretrazi.UseVisualStyleBackColor = false;
@@ -160,13 +153,13 @@
             btnDodajKlijenta.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
             btnDodajKlijenta.FlatStyle = FlatStyle.Flat;
             btnDodajKlijenta.ForeColor = Color.White;
-            btnDodajKlijenta.Location = new Point(716, 144);
-            btnDodajKlijenta.Margin = new Padding(2);
+            btnDodajKlijenta.Location = new Point(1023, 240);
             btnDodajKlijenta.Name = "btnDodajKlijenta";
-            btnDodajKlijenta.Size = new Size(156, 42);
+            btnDodajKlijenta.Size = new Size(223, 70);
             btnDodajKlijenta.TabIndex = 8;
             btnDodajKlijenta.Text = "Dodaj";
             btnDodajKlijenta.UseVisualStyleBackColor = false;
+            btnDodajKlijenta.Click += btnDodajKlijenta_Click;
             // 
             // btnIzmeniKorisnika
             // 
@@ -174,10 +167,9 @@
             btnIzmeniKorisnika.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
             btnIzmeniKorisnika.FlatStyle = FlatStyle.Flat;
             btnIzmeniKorisnika.ForeColor = Color.White;
-            btnIzmeniKorisnika.Location = new Point(716, 189);
-            btnIzmeniKorisnika.Margin = new Padding(2);
+            btnIzmeniKorisnika.Location = new Point(1023, 315);
             btnIzmeniKorisnika.Name = "btnIzmeniKorisnika";
-            btnIzmeniKorisnika.Size = new Size(156, 42);
+            btnIzmeniKorisnika.Size = new Size(223, 70);
             btnIzmeniKorisnika.TabIndex = 9;
             btnIzmeniKorisnika.Text = "Izmeni";
             btnIzmeniKorisnika.UseVisualStyleBackColor = false;
@@ -188,10 +180,9 @@
             btnObrisiKorisnika.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
             btnObrisiKorisnika.FlatStyle = FlatStyle.Flat;
             btnObrisiKorisnika.ForeColor = Color.White;
-            btnObrisiKorisnika.Location = new Point(716, 235);
-            btnObrisiKorisnika.Margin = new Padding(2);
+            btnObrisiKorisnika.Location = new Point(1023, 392);
             btnObrisiKorisnika.Name = "btnObrisiKorisnika";
-            btnObrisiKorisnika.Size = new Size(156, 42);
+            btnObrisiKorisnika.Size = new Size(223, 70);
             btnObrisiKorisnika.TabIndex = 10;
             btnObrisiKorisnika.Text = "Obriši";
             btnObrisiKorisnika.UseVisualStyleBackColor = false;
@@ -202,10 +193,9 @@
             btnDetalji.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
             btnDetalji.FlatStyle = FlatStyle.Flat;
             btnDetalji.ForeColor = Color.White;
-            btnDetalji.Location = new Point(716, 280);
-            btnDetalji.Margin = new Padding(2);
+            btnDetalji.Location = new Point(1023, 467);
             btnDetalji.Name = "btnDetalji";
-            btnDetalji.Size = new Size(156, 42);
+            btnDetalji.Size = new Size(223, 70);
             btnDetalji.TabIndex = 11;
             btnDetalji.Text = "Detalji";
             btnDetalji.UseVisualStyleBackColor = false;
@@ -216,10 +206,9 @@
             btnOsvezi.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
             btnOsvezi.FlatStyle = FlatStyle.Flat;
             btnOsvezi.ForeColor = Color.White;
-            btnOsvezi.Location = new Point(716, 326);
-            btnOsvezi.Margin = new Padding(2);
+            btnOsvezi.Location = new Point(1023, 543);
             btnOsvezi.Name = "btnOsvezi";
-            btnOsvezi.Size = new Size(156, 42);
+            btnOsvezi.Size = new Size(223, 70);
             btnOsvezi.TabIndex = 14;
             btnOsvezi.Text = "Osveži";
             btnOsvezi.UseVisualStyleBackColor = false;
@@ -228,11 +217,9 @@
             // 
             groupBox1.Controls.Add(dgvFizickaLica);
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(8, 10);
-            groupBox1.Margin = new Padding(2);
+            groupBox1.Location = new Point(11, 17);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(2);
-            groupBox1.Size = new Size(700, 204);
+            groupBox1.Size = new Size(1000, 340);
             groupBox1.TabIndex = 15;
             groupBox1.TabStop = false;
             groupBox1.Text = "Fizička lica";
@@ -242,43 +229,42 @@
             dgvFizickaLica.AllowUserToAddRows = false;
             dgvFizickaLica.BackgroundColor = Color.FromArgb(51, 51, 51);
             dgvFizickaLica.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(61, 61, 61);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvFizickaLica.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(61, 61, 61);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvFizickaLica.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvFizickaLica.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvFizickaLica.Columns.AddRange(new DataGridViewColumn[] { colIme, colJmbg, colBrLicne, colGrad, colTelefon, colEmail, colStatus });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(61, 61, 61);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dgvFizickaLica.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(61, 61, 61);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvFizickaLica.DefaultCellStyle = dataGridViewCellStyle2;
             dgvFizickaLica.EnableHeadersVisualStyles = false;
             dgvFizickaLica.GridColor = Color.FromArgb(71, 71, 71);
-            dgvFizickaLica.Location = new Point(4, 14);
-            dgvFizickaLica.Margin = new Padding(2);
+            dgvFizickaLica.Location = new Point(6, 23);
             dgvFizickaLica.Name = "dgvFizickaLica";
             dgvFizickaLica.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(61, 61, 61);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgvFizickaLica.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(61, 61, 61);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvFizickaLica.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvFizickaLica.RowHeadersWidth = 62;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(61, 61, 61);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dgvFizickaLica.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            dgvFizickaLica.Size = new Size(692, 186);
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(61, 61, 61);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dgvFizickaLica.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvFizickaLica.Size = new Size(989, 310);
             dgvFizickaLica.TabIndex = 0;
             // 
             // colIme
@@ -334,11 +320,9 @@
             // 
             groupBox2.Controls.Add(dgvPravnaLica);
             groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(8, 218);
-            groupBox2.Margin = new Padding(2);
+            groupBox2.Location = new Point(11, 363);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(2);
-            groupBox2.Size = new Size(700, 204);
+            groupBox2.Size = new Size(1000, 340);
             groupBox2.TabIndex = 16;
             groupBox2.TabStop = false;
             groupBox2.Text = "Pravna lica";
@@ -352,12 +336,11 @@
             dgvPravnaLica.Columns.AddRange(new DataGridViewColumn[] { colNazivFirme, colPib, colAdresa, colGrad2, colTelefon2, colEmail2, colStatus2 });
             dgvPravnaLica.EnableHeadersVisualStyles = false;
             dgvPravnaLica.GridColor = Color.FromArgb(71, 71, 71);
-            dgvPravnaLica.Location = new Point(4, 14);
-            dgvPravnaLica.Margin = new Padding(2);
+            dgvPravnaLica.Location = new Point(6, 23);
             dgvPravnaLica.Name = "dgvPravnaLica";
             dgvPravnaLica.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dgvPravnaLica.RowHeadersWidth = 62;
-            dgvPravnaLica.Size = new Size(692, 186);
+            dgvPravnaLica.Size = new Size(989, 310);
             dgvPravnaLica.TabIndex = 1;
             // 
             // colNazivFirme
@@ -413,10 +396,9 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(712, 370);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(1017, 617);
             label1.Name = "label1";
-            label1.Size = new Size(72, 15);
+            label1.Size = new Size(107, 25);
             label1.TabIndex = 17;
             label1.Text = "Broj klijenta:";
             // 
@@ -424,10 +406,9 @@
             // 
             lblInfo.AutoSize = true;
             lblInfo.ForeColor = Color.White;
-            lblInfo.Location = new Point(791, 370);
-            lblInfo.Margin = new Padding(2, 0, 2, 0);
+            lblInfo.Location = new Point(1130, 617);
             lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(43, 15);
+            lblInfo.Size = new Size(72, 25);
             lblInfo.TabIndex = 18;
             lblInfo.Text = "111111";
             // 
@@ -441,21 +422,19 @@
             groupBoxPretraga.Controls.Add(txtBoxPretraga);
             groupBoxPretraga.Controls.Add(lblEmail);
             groupBoxPretraga.ForeColor = Color.White;
-            groupBoxPretraga.Location = new Point(712, 10);
-            groupBoxPretraga.Margin = new Padding(2);
+            groupBoxPretraga.Location = new Point(1017, 17);
             groupBoxPretraga.Name = "groupBoxPretraga";
-            groupBoxPretraga.Padding = new Padding(2);
-            groupBoxPretraga.Size = new Size(160, 130);
+            groupBoxPretraga.Size = new Size(229, 217);
             groupBoxPretraga.TabIndex = 20;
             groupBoxPretraga.TabStop = false;
             groupBoxPretraga.Text = "Pretraga";
             // 
             // KlijentiPregled
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 28, 28);
-            ClientSize = new Size(881, 446);
+            ClientSize = new Size(1259, 743);
             Controls.Add(groupBoxPretraga);
             Controls.Add(lblInfo);
             Controls.Add(label1);
@@ -466,7 +445,6 @@
             Controls.Add(btnObrisiKorisnika);
             Controls.Add(btnIzmeniKorisnika);
             Controls.Add(btnDodajKlijenta);
-            Margin = new Padding(2);
             Name = "KlijentiPregled";
             Text = "KlijentiPregled";
             Load += KlijentiPregled_Load;

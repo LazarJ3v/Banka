@@ -139,5 +139,11 @@ namespace Prodavnica.Forme
                 s.Close();
             }
         }
+
+        private void btnDodajKlijenta_Click(object sender, EventArgs e)
+        {
+            KlijentDodaj forma = new KlijentDodaj();
+            forma.Show();
+        }
     }
 }
