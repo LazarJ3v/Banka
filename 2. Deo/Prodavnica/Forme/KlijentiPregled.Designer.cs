@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblPretraga = new Label();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            lblEmail = new Label();
             txtBoxPretraga = new TextBox();
             lblTipKlijenta = new Label();
             cmbTip = new ComboBox();
@@ -42,6 +46,13 @@
             btnOsvezi = new Button();
             groupBox1 = new GroupBox();
             dgvFizickaLica = new DataGridView();
+            colIme = new DataGridViewTextBoxColumn();
+            colJmbg = new DataGridViewTextBoxColumn();
+            colBrLicne = new DataGridViewTextBoxColumn();
+            colGrad = new DataGridViewTextBoxColumn();
+            colTelefon = new DataGridViewTextBoxColumn();
+            colEmail = new DataGridViewTextBoxColumn();
+            colStatus = new DataGridViewTextBoxColumn();
             groupBox2 = new GroupBox();
             dgvPravnaLica = new DataGridView();
             colNazivFirme = new DataGridViewTextBoxColumn();
@@ -53,128 +64,162 @@
             colStatus2 = new DataGridViewTextBoxColumn();
             label1 = new Label();
             lblInfo = new Label();
-            colIme = new DataGridViewTextBoxColumn();
-            colJmbg = new DataGridViewTextBoxColumn();
-            colBrLicne = new DataGridViewTextBoxColumn();
-            colGrad = new DataGridViewTextBoxColumn();
-            colTelefon = new DataGridViewTextBoxColumn();
-            colEmail = new DataGridViewTextBoxColumn();
-            colStatus = new DataGridViewTextBoxColumn();
+            groupBoxPretraga = new GroupBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFizickaLica).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPravnaLica).BeginInit();
+            groupBoxPretraga.SuspendLayout();
             SuspendLayout();
             // 
-            // lblPretraga
+            // lblEmail
             // 
-            lblPretraga.AutoSize = true;
-            lblPretraga.Location = new Point(12, 14);
-            lblPretraga.Name = "lblPretraga";
-            lblPretraga.Size = new Size(109, 23);
-            lblPretraga.TabIndex = 0;
-            lblPretraga.Text = "Pretraga:";
+            lblEmail.AutoSize = true;
+            lblEmail.ForeColor = Color.White;
+            lblEmail.Location = new Point(12, 20);
+            lblEmail.Margin = new Padding(2, 0, 2, 0);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(39, 15);
+            lblEmail.TabIndex = 0;
+            lblEmail.Text = "Email:";
             // 
             // txtBoxPretraga
             // 
-            txtBoxPretraga.BackColor = SystemColors.GradientInactiveCaption;
-            txtBoxPretraga.Location = new Point(118, 11);
+            txtBoxPretraga.BackColor = Color.FromArgb(51, 51, 51);
+            txtBoxPretraga.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxPretraga.ForeColor = Color.White;
+            txtBoxPretraga.Location = new Point(57, 18);
+            txtBoxPretraga.Margin = new Padding(2);
             txtBoxPretraga.Name = "txtBoxPretraga";
-            txtBoxPretraga.Size = new Size(182, 31);
+            txtBoxPretraga.Size = new Size(101, 23);
             txtBoxPretraga.TabIndex = 1;
             // 
             // lblTipKlijenta
             // 
             lblTipKlijenta.AutoSize = true;
-            lblTipKlijenta.Location = new Point(315, 15);
+            lblTipKlijenta.ForeColor = Color.White;
+            lblTipKlijenta.Location = new Point(25, 43);
+            lblTipKlijenta.Margin = new Padding(2, 0, 2, 0);
             lblTipKlijenta.Name = "lblTipKlijenta";
-            lblTipKlijenta.Size = new Size(54, 23);
+            lblTipKlijenta.Size = new Size(27, 15);
             lblTipKlijenta.TabIndex = 2;
             lblTipKlijenta.Text = "Tip:";
             // 
             // cmbTip
             // 
-            cmbTip.BackColor = SystemColors.GradientInactiveCaption;
+            cmbTip.BackColor = Color.FromArgb(51, 51, 51);
+            cmbTip.FlatStyle = FlatStyle.Flat;
+            cmbTip.ForeColor = Color.White;
             cmbTip.FormattingEnabled = true;
-            cmbTip.Location = new Point(364, 11);
+            cmbTip.Location = new Point(57, 40);
+            cmbTip.Margin = new Padding(2);
             cmbTip.Name = "cmbTip";
-            cmbTip.Size = new Size(156, 31);
+            cmbTip.Size = new Size(101, 23);
             cmbTip.TabIndex = 3;
             // 
             // lblStatus
             // 
             lblStatus.AutoSize = true;
-            lblStatus.Location = new Point(537, 15);
+            lblStatus.ForeColor = Color.White;
+            lblStatus.Location = new Point(8, 65);
+            lblStatus.Margin = new Padding(2, 0, 2, 0);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(87, 23);
+            lblStatus.Size = new Size(42, 15);
             lblStatus.TabIndex = 4;
             lblStatus.Text = "Status:";
             // 
             // cmbStatus
             // 
-            cmbStatus.BackColor = SystemColors.GradientInactiveCaption;
+            cmbStatus.BackColor = Color.FromArgb(51, 51, 51);
+            cmbStatus.FlatStyle = FlatStyle.Flat;
+            cmbStatus.ForeColor = Color.White;
             cmbStatus.FormattingEnabled = true;
-            cmbStatus.Location = new Point(621, 12);
+            cmbStatus.Location = new Point(57, 64);
+            cmbStatus.Margin = new Padding(2);
             cmbStatus.Name = "cmbStatus";
-            cmbStatus.Size = new Size(150, 31);
+            cmbStatus.Size = new Size(101, 23);
             cmbStatus.TabIndex = 5;
             // 
             // btnPretrazi
             // 
-            btnPretrazi.BackColor = SystemColors.GradientInactiveCaption;
-            btnPretrazi.Location = new Point(777, 11);
+            btnPretrazi.BackColor = Color.FromArgb(41, 41, 41);
+            btnPretrazi.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
+            btnPretrazi.FlatStyle = FlatStyle.Flat;
+            btnPretrazi.ForeColor = Color.White;
+            btnPretrazi.Location = new Point(4, 91);
+            btnPretrazi.Margin = new Padding(2);
             btnPretrazi.Name = "btnPretrazi";
-            btnPretrazi.Size = new Size(112, 34);
+            btnPretrazi.Size = new Size(152, 22);
             btnPretrazi.TabIndex = 7;
             btnPretrazi.Text = "Pretraži";
             btnPretrazi.UseVisualStyleBackColor = false;
             // 
             // btnDodajKlijenta
             // 
-            btnDodajKlijenta.BackColor = SystemColors.GradientInactiveCaption;
-            btnDodajKlijenta.Location = new Point(11, 455);
+            btnDodajKlijenta.BackColor = Color.FromArgb(41, 41, 41);
+            btnDodajKlijenta.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
+            btnDodajKlijenta.FlatStyle = FlatStyle.Flat;
+            btnDodajKlijenta.ForeColor = Color.White;
+            btnDodajKlijenta.Location = new Point(714, 134);
+            btnDodajKlijenta.Margin = new Padding(2);
             btnDodajKlijenta.Name = "btnDodajKlijenta";
-            btnDodajKlijenta.Size = new Size(128, 64);
+            btnDodajKlijenta.Size = new Size(156, 42);
             btnDodajKlijenta.TabIndex = 8;
             btnDodajKlijenta.Text = "Dodaj";
             btnDodajKlijenta.UseVisualStyleBackColor = false;
             // 
             // btnIzmeniKorisnika
             // 
-            btnIzmeniKorisnika.BackColor = SystemColors.GradientInactiveCaption;
-            btnIzmeniKorisnika.Location = new Point(145, 455);
+            btnIzmeniKorisnika.BackColor = Color.FromArgb(41, 41, 41);
+            btnIzmeniKorisnika.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
+            btnIzmeniKorisnika.FlatStyle = FlatStyle.Flat;
+            btnIzmeniKorisnika.ForeColor = Color.White;
+            btnIzmeniKorisnika.Location = new Point(714, 179);
+            btnIzmeniKorisnika.Margin = new Padding(2);
             btnIzmeniKorisnika.Name = "btnIzmeniKorisnika";
-            btnIzmeniKorisnika.Size = new Size(128, 64);
+            btnIzmeniKorisnika.Size = new Size(156, 42);
             btnIzmeniKorisnika.TabIndex = 9;
             btnIzmeniKorisnika.Text = "Izmeni";
             btnIzmeniKorisnika.UseVisualStyleBackColor = false;
             // 
             // btnObrisiKorisnika
             // 
-            btnObrisiKorisnika.BackColor = SystemColors.GradientInactiveCaption;
-            btnObrisiKorisnika.Location = new Point(279, 455);
+            btnObrisiKorisnika.BackColor = Color.FromArgb(41, 41, 41);
+            btnObrisiKorisnika.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
+            btnObrisiKorisnika.FlatStyle = FlatStyle.Flat;
+            btnObrisiKorisnika.ForeColor = Color.White;
+            btnObrisiKorisnika.Location = new Point(714, 225);
+            btnObrisiKorisnika.Margin = new Padding(2);
             btnObrisiKorisnika.Name = "btnObrisiKorisnika";
-            btnObrisiKorisnika.Size = new Size(128, 64);
+            btnObrisiKorisnika.Size = new Size(156, 42);
             btnObrisiKorisnika.TabIndex = 10;
             btnObrisiKorisnika.Text = "Obriši";
             btnObrisiKorisnika.UseVisualStyleBackColor = false;
             // 
             // btnDetalji
             // 
-            btnDetalji.BackColor = SystemColors.GradientInactiveCaption;
-            btnDetalji.Location = new Point(413, 455);
+            btnDetalji.BackColor = Color.FromArgb(41, 41, 41);
+            btnDetalji.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
+            btnDetalji.FlatStyle = FlatStyle.Flat;
+            btnDetalji.ForeColor = Color.White;
+            btnDetalji.Location = new Point(714, 270);
+            btnDetalji.Margin = new Padding(2);
             btnDetalji.Name = "btnDetalji";
-            btnDetalji.Size = new Size(128, 64);
+            btnDetalji.Size = new Size(157, 42);
             btnDetalji.TabIndex = 11;
             btnDetalji.Text = "Detalji";
             btnDetalji.UseVisualStyleBackColor = false;
             // 
             // btnOsvezi
             // 
-            btnOsvezi.BackColor = SystemColors.GradientInactiveCaption;
-            btnOsvezi.Location = new Point(547, 455);
+            btnOsvezi.BackColor = Color.FromArgb(41, 41, 41);
+            btnOsvezi.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
+            btnOsvezi.FlatStyle = FlatStyle.Flat;
+            btnOsvezi.ForeColor = Color.White;
+            btnOsvezi.Location = new Point(714, 316);
+            btnOsvezi.Margin = new Padding(2);
             btnOsvezi.Name = "btnOsvezi";
-            btnOsvezi.Size = new Size(128, 64);
+            btnOsvezi.Size = new Size(156, 42);
             btnOsvezi.TabIndex = 14;
             btnOsvezi.Text = "Osveži";
             btnOsvezi.UseVisualStyleBackColor = false;
@@ -182,9 +227,12 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(dgvFizickaLica);
-            groupBox1.Location = new Point(12, 58);
+            groupBox1.ForeColor = Color.White;
+            groupBox1.Location = new Point(8, 10);
+            groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(877, 194);
+            groupBox1.Padding = new Padding(2);
+            groupBox1.Size = new Size(700, 204);
             groupBox1.TabIndex = 15;
             groupBox1.TabStop = false;
             groupBox1.Text = "Fizička lica";
@@ -192,21 +240,105 @@
             // dgvFizickaLica
             // 
             dgvFizickaLica.AllowUserToAddRows = false;
-            dgvFizickaLica.BackgroundColor = SystemColors.GradientInactiveCaption;
+            dgvFizickaLica.BackgroundColor = Color.FromArgb(51, 51, 51);
+            dgvFizickaLica.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(61, 61, 61);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvFizickaLica.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvFizickaLica.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvFizickaLica.Columns.AddRange(new DataGridViewColumn[] { colIme, colJmbg, colBrLicne, colGrad, colTelefon, colEmail, colStatus });
-            dgvFizickaLica.Location = new Point(6, 22);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(61, 61, 61);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvFizickaLica.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvFizickaLica.EnableHeadersVisualStyles = false;
+            dgvFizickaLica.GridColor = Color.FromArgb(71, 71, 71);
+            dgvFizickaLica.Location = new Point(4, 14);
+            dgvFizickaLica.Margin = new Padding(2);
             dgvFizickaLica.Name = "dgvFizickaLica";
+            dgvFizickaLica.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(61, 61, 61);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvFizickaLica.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvFizickaLica.RowHeadersWidth = 62;
-            dgvFizickaLica.Size = new Size(865, 166);
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(61, 61, 61);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dgvFizickaLica.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvFizickaLica.Size = new Size(692, 186);
             dgvFizickaLica.TabIndex = 0;
+            // 
+            // colIme
+            // 
+            colIme.HeaderText = "Ime";
+            colIme.MinimumWidth = 8;
+            colIme.Name = "colIme";
+            colIme.Width = 150;
+            // 
+            // colJmbg
+            // 
+            colJmbg.HeaderText = "JMBG";
+            colJmbg.MinimumWidth = 8;
+            colJmbg.Name = "colJmbg";
+            colJmbg.Width = 150;
+            // 
+            // colBrLicne
+            // 
+            colBrLicne.HeaderText = "Br. licne karte";
+            colBrLicne.MinimumWidth = 8;
+            colBrLicne.Name = "colBrLicne";
+            colBrLicne.Width = 150;
+            // 
+            // colGrad
+            // 
+            colGrad.HeaderText = "Grad";
+            colGrad.MinimumWidth = 8;
+            colGrad.Name = "colGrad";
+            colGrad.Width = 150;
+            // 
+            // colTelefon
+            // 
+            colTelefon.HeaderText = "Telefon";
+            colTelefon.MinimumWidth = 8;
+            colTelefon.Name = "colTelefon";
+            colTelefon.Width = 150;
+            // 
+            // colEmail
+            // 
+            colEmail.HeaderText = "Email";
+            colEmail.MinimumWidth = 8;
+            colEmail.Name = "colEmail";
+            colEmail.Width = 150;
+            // 
+            // colStatus
+            // 
+            colStatus.HeaderText = "Status";
+            colStatus.MinimumWidth = 8;
+            colStatus.Name = "colStatus";
+            colStatus.Width = 150;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(dgvPravnaLica);
-            groupBox2.Location = new Point(11, 255);
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(8, 218);
+            groupBox2.Margin = new Padding(2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(877, 194);
+            groupBox2.Padding = new Padding(2);
+            groupBox2.Size = new Size(700, 204);
             groupBox2.TabIndex = 16;
             groupBox2.TabStop = false;
             groupBox2.Text = "Pravna lica";
@@ -214,13 +346,22 @@
             // dgvPravnaLica
             // 
             dgvPravnaLica.AllowUserToAddRows = false;
-            dgvPravnaLica.BackgroundColor = SystemColors.GradientInactiveCaption;
+            dgvPravnaLica.BackgroundColor = Color.FromArgb(51, 51, 51);
+            dgvPravnaLica.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgvPravnaLica.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvPravnaLica.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPravnaLica.Columns.AddRange(new DataGridViewColumn[] { colNazivFirme, colPib, colAdresa, colGrad2, colTelefon2, colEmail2, colStatus2 });
-            dgvPravnaLica.Location = new Point(7, 22);
+            dgvPravnaLica.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvPravnaLica.EnableHeadersVisualStyles = false;
+            dgvPravnaLica.GridColor = Color.FromArgb(71, 71, 71);
+            dgvPravnaLica.Location = new Point(4, 14);
+            dgvPravnaLica.Margin = new Padding(2);
             dgvPravnaLica.Name = "dgvPravnaLica";
+            dgvPravnaLica.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgvPravnaLica.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvPravnaLica.RowHeadersWidth = 62;
-            dgvPravnaLica.Size = new Size(865, 166);
+            dgvPravnaLica.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvPravnaLica.Size = new Size(692, 186);
             dgvPravnaLica.TabIndex = 1;
             // 
             // colNazivFirme
@@ -275,76 +416,51 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(712, 455);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(710, 360);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(164, 23);
+            label1.Size = new Size(72, 15);
             label1.TabIndex = 17;
             label1.Text = "Broj klijenta:";
             // 
             // lblInfo
             // 
             lblInfo.AutoSize = true;
-            lblInfo.Location = new Point(747, 487);
+            lblInfo.ForeColor = Color.White;
+            lblInfo.Location = new Point(789, 360);
+            lblInfo.Margin = new Padding(2, 0, 2, 0);
             lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(76, 23);
+            lblInfo.Size = new Size(43, 15);
             lblInfo.TabIndex = 18;
             lblInfo.Text = "111111";
             // 
-            // colIme
+            // groupBoxPretraga
             // 
-            colIme.HeaderText = "Ime";
-            colIme.MinimumWidth = 8;
-            colIme.Name = "colIme";
-            colIme.Width = 150;
-            // 
-            // colJmbg
-            // 
-            colJmbg.HeaderText = "JMBG";
-            colJmbg.MinimumWidth = 8;
-            colJmbg.Name = "colJmbg";
-            colJmbg.Width = 150;
-            // 
-            // colBrLicne
-            // 
-            colBrLicne.HeaderText = "Br. licne karte";
-            colBrLicne.MinimumWidth = 8;
-            colBrLicne.Name = "colBrLicne";
-            colBrLicne.Width = 150;
-            // 
-            // colGrad
-            // 
-            colGrad.HeaderText = "Grad";
-            colGrad.MinimumWidth = 8;
-            colGrad.Name = "colGrad";
-            colGrad.Width = 150;
-            // 
-            // colTelefon
-            // 
-            colTelefon.HeaderText = "Telefon";
-            colTelefon.MinimumWidth = 8;
-            colTelefon.Name = "colTelefon";
-            colTelefon.Width = 150;
-            // 
-            // colEmail
-            // 
-            colEmail.HeaderText = "Email";
-            colEmail.MinimumWidth = 8;
-            colEmail.Name = "colEmail";
-            colEmail.Width = 150;
-            // 
-            // colStatus
-            // 
-            colStatus.HeaderText = "Status";
-            colStatus.MinimumWidth = 8;
-            colStatus.Name = "colStatus";
-            colStatus.Width = 150;
+            groupBoxPretraga.Controls.Add(cmbStatus);
+            groupBoxPretraga.Controls.Add(btnPretrazi);
+            groupBoxPretraga.Controls.Add(lblStatus);
+            groupBoxPretraga.Controls.Add(cmbTip);
+            groupBoxPretraga.Controls.Add(lblTipKlijenta);
+            groupBoxPretraga.Controls.Add(txtBoxPretraga);
+            groupBoxPretraga.Controls.Add(lblEmail);
+            groupBoxPretraga.ForeColor = Color.White;
+            groupBoxPretraga.Location = new Point(712, 10);
+            groupBoxPretraga.Margin = new Padding(2);
+            groupBoxPretraga.Name = "groupBoxPretraga";
+            groupBoxPretraga.Padding = new Padding(2);
+            groupBoxPretraga.Size = new Size(160, 120);
+            groupBoxPretraga.TabIndex = 20;
+            groupBoxPretraga.TabStop = false;
+            groupBoxPretraga.Text = "Pretraga";
             // 
             // KlijentiPregled
             // 
-            AutoScaleDimensions = new SizeF(11F, 23F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(904, 531);
+            BackColor = Color.FromArgb(28, 28, 28);
+            ClientSize = new Size(881, 446);
+            Controls.Add(groupBoxPretraga);
             Controls.Add(lblInfo);
             Controls.Add(label1);
             Controls.Add(groupBox2);
@@ -354,13 +470,7 @@
             Controls.Add(btnObrisiKorisnika);
             Controls.Add(btnIzmeniKorisnika);
             Controls.Add(btnDodajKlijenta);
-            Controls.Add(btnPretrazi);
-            Controls.Add(cmbStatus);
-            Controls.Add(lblStatus);
-            Controls.Add(cmbTip);
-            Controls.Add(lblTipKlijenta);
-            Controls.Add(txtBoxPretraga);
-            Controls.Add(lblPretraga);
+            Margin = new Padding(2);
             Name = "KlijentiPregled";
             Text = "KlijentiPregled";
             Load += KlijentiPregled_Load;
@@ -368,13 +478,15 @@
             ((System.ComponentModel.ISupportInitialize)dgvFizickaLica).EndInit();
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvPravnaLica).EndInit();
+            groupBoxPretraga.ResumeLayout(false);
+            groupBoxPretraga.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label lblPretraga;
+        private Label lblEmail;
         private TextBox txtBoxPretraga;
         private Label lblTipKlijenta;
         private ComboBox cmbTip;
@@ -406,5 +518,6 @@
         private DataGridViewTextBoxColumn colTelefon;
         private DataGridViewTextBoxColumn colEmail;
         private DataGridViewTextBoxColumn colStatus;
+        private GroupBox groupBoxPretraga;
     }
 }

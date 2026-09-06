@@ -12,11 +12,28 @@ using System.Windows.Forms;
 
 namespace Prodavnica.Forme
 {
-    public partial class KlijentiPregled : Form
+    public partial class KlijentiPregled : BaseForm
     {
         public KlijentiPregled()
         {
             InitializeComponent();
+            StilizujButton([
+                btnDetalji,
+                btnDodajKlijenta,
+                btnIzmeniKorisnika,
+                btnObrisiKorisnika,
+                btnOsvezi,
+                btnPretrazi
+                ]);
+            StilizujGroupBox([
+                groupBox1,
+                groupBox2,
+                groupBoxPretraga
+                ]);
+            StilizujDataGridView([
+                dgvFizickaLica,
+                dgvPravnaLica
+                ]);
         }
 
         private void KlijentiPregled_Load(object sender, EventArgs e)
