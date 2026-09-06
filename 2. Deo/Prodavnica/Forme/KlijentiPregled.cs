@@ -14,26 +14,26 @@ namespace Prodavnica.Forme
 {
     public partial class KlijentiPregled : BaseForm
     {
-        public KlijentiPregled()
+        public KlijentiPregled() : base()
         {
             InitializeComponent();
-            StilizujButton([
+            StilizujButton(
                 btnDetalji,
                 btnDodajKlijenta,
                 btnIzmeniKorisnika,
                 btnObrisiKorisnika,
                 btnOsvezi,
                 btnPretrazi
-                ]);
-            StilizujGroupBox([
+                );
+            StilizujGroupBox(
                 groupBox1,
                 groupBox2,
                 groupBoxPretraga
-                ]);
-            StilizujDataGridView([
+                );
+            StilizujDataGridView(
                 dgvFizickaLica,
                 dgvPravnaLica
-                ]);
+                );
         }
 
         private void KlijentiPregled_Load(object sender, EventArgs e)

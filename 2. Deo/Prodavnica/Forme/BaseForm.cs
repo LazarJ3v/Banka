@@ -14,11 +14,12 @@ namespace Prodavnica.Forme
         // ==========================================
         // PALETA BOJA
         // ==========================================
-        protected static readonly Color BojaNajtamnija = Color.FromArgb(28, 28, 28);   // pozadina forme
-        protected static readonly Color BojaTamna = Color.FromArgb(41, 41, 41);        // pozadina panela/groupbox
-        protected static readonly Color BojaSrednja = Color.FromArgb(51, 51, 51);      // pozadina input kontrola
-        protected static readonly Color BojaSvetlija = Color.FromArgb(61, 61, 61);     // border / dgv pozadina
-        protected static readonly Color BojaNajsvetlija = Color.FromArgb(71, 71, 71);  // hover / dgv border / akcenti
+        protected static readonly Color BojaNajtamnija = Color.FromArgb(28, 28, 28);        // pozadina forme
+        protected static readonly Color BojaTamna = Color.FromArgb(41, 41, 41);             // pozadina panela/groupbox
+        protected static readonly Color BojaSrednja = Color.FromArgb(51, 51, 51);           // pozadina input kontrola
+        protected static readonly Color BojaSvetlija = Color.FromArgb(61, 61, 61);          // border / dgv pozadina
+        protected static readonly Color BojaNajsvetlija = Color.FromArgb(71, 71, 71);       // hover / dgv border / akcenti
+        protected static readonly Color BojaGridCellSelect = Color.FromArgb(255, 149, 81);  // select
 
         protected static readonly Color TekstBoja = Color.FromArgb(230, 230, 230);
         protected static readonly Color TekstBojaSekundarna = Color.FromArgb(160, 160, 160);
@@ -58,14 +59,14 @@ namespace Prodavnica.Forme
             // Row header - ista boja kao ostatak grida
             dgv.RowHeadersDefaultCellStyle.BackColor = BojaSvetlija;
             dgv.RowHeadersDefaultCellStyle.ForeColor = TekstBoja;
-            dgv.RowHeadersDefaultCellStyle.SelectionBackColor = BojaSvetlija;
+            dgv.RowHeadersDefaultCellStyle.SelectionBackColor = BojaGridCellSelect;
             dgv.RowHeadersDefaultCellStyle.SelectionForeColor = TekstBoja;
-            dgv.RowHeadersVisible = false;
+            dgv.RowHeadersVisible = true;
 
             // Ćelije
             dgv.DefaultCellStyle.BackColor = BojaSvetlija;
             dgv.DefaultCellStyle.ForeColor = TekstBoja;
-            dgv.DefaultCellStyle.SelectionBackColor = BojaNajsvetlija;
+            dgv.DefaultCellStyle.SelectionBackColor = BojaGridCellSelect;
             dgv.DefaultCellStyle.SelectionForeColor = TekstBoja;
             dgv.DefaultCellStyle.Font = new Font("Segoe UI", 9);
 
