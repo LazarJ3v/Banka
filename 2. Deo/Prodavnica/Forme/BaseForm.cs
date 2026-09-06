@@ -39,6 +39,8 @@ namespace Prodavnica.Forme
         // ==========================================
         protected void StilizujDataGridView(DataGridView dgv)
         {
+            dgv.ReadOnly = true;
+
             dgv.BackgroundColor = BojaSvetlija;
             dgv.BorderStyle = BorderStyle.None;
             dgv.GridColor = BojaNajsvetlija;
@@ -61,7 +63,7 @@ namespace Prodavnica.Forme
             dgv.RowHeadersDefaultCellStyle.ForeColor = TekstBoja;
             dgv.RowHeadersDefaultCellStyle.SelectionBackColor = BojaGridCellSelect;
             dgv.RowHeadersDefaultCellStyle.SelectionForeColor = TekstBoja;
-            dgv.RowHeadersVisible = true;
+            dgv.RowHeadersVisible = false;
 
             // Ćelije
             dgv.DefaultCellStyle.BackColor = BojaSvetlija;
