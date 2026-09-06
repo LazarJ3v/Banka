@@ -26,14 +26,46 @@ namespace Prodavnica.Forme
                 btnPretrazi
                 );
             StilizujGroupBox(
-                groupBox1,
-                groupBox2,
+                gbFizickaLica,
+                gbPravnaLica,
                 groupBoxPretraga
                 );
             StilizujDataGridView(
                 dgvFizickaLica,
                 dgvPravnaLica
                 );
+            StilizujLabel(lblInfo);
+            this.Click += (s, e) =>
+            {
+                dgvFizickaLica.ClearSelection();
+                dgvPravnaLica.ClearSelection();
+            };
+            gbFizickaLica.Click += (s, e) => dgvFizickaLica.ClearSelection();
+            gbPravnaLica.Click += (s, e) => dgvPravnaLica.ClearSelection();
+            dgvFizickaLica.MouseClick += (s, e) =>
+            {
+                var hit = dgvFizickaLica.HitTest(e.X, e.Y);
+                if (hit.RowIndex == -1)
+                    dgvFizickaLica.ClearSelection();
+            };
+
+            dgvPravnaLica.MouseClick += (s, e) =>
+            {
+                var hit = dgvPravnaLica.HitTest(e.X, e.Y);
+                if (hit.RowIndex == -1)
+                    dgvPravnaLica.ClearSelection();
+            };
+            dgvFizickaLica.SelectionChanged += (s, e) =>
+            {
+                if (dgvFizickaLica.CurrentRow != null && dgvFizickaLica.CurrentRow.Selected)
+                    dgvPravnaLica.ClearSelection();
+            };
+
+            dgvPravnaLica.SelectionChanged += (s, e) =>
+            {
+                if (dgvPravnaLica.CurrentRow != null && dgvPravnaLica.CurrentRow.Selected)
+                    dgvFizickaLica.ClearSelection();
+            };
         }
 
         private void KlijentiPregled_Load(object sender, EventArgs e)
@@ -66,6 +98,8 @@ namespace Prodavnica.Forme
                 dgvFizickaLica.AutoGenerateColumns = false;
                 dgvFizickaLica.DataSource = null;
                 dgvFizickaLica.Rows.Clear();
+                dgvFizickaLica.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgvFizickaLica.MultiSelect = false;
 
                 foreach (var fl in fizickoPregled)
                 {
@@ -101,6 +135,8 @@ namespace Prodavnica.Forme
                 dgvPravnaLica.AutoGenerateColumns = false;
                 dgvPravnaLica.DataSource = null;
                 dgvPravnaLica.Rows.Clear();
+                dgvPravnaLica.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgvPravnaLica.MultiSelect = false;
 
                 foreach (var pl in pravnoPregled)
                 {
@@ -140,10 +176,35 @@ namespace Prodavnica.Forme
             }
         }
 
+<<<<<<< HEAD
         private void btnDodajKlijenta_Click(object sender, EventArgs e)
         {
             KlijentDodaj forma = new KlijentDodaj();
             forma.Show();
+=======
+        private void btnIzmeniKorisnika_Click(object sender, EventArgs e)
+        {
+            if (dgvFizickaLica.CurrentRow != null && dgvFizickaLica.CurrentRow.Selected)
+            {
+                FizickoLicePregled izabranoFizicko = dgvFizickaLica.CurrentRow.Tag as FizickoLicePregled;
+                FizickoLiceIzmena forma = new FizickoLiceIzmena(izabranoFizicko);
+                forma.ShowDialog();
+                KlijentiPregled_Load(sender, e); // osveži grid nakon izmene
+                return;
+            }
+
+            if (dgvPravnaLica.CurrentRow != null && dgvPravnaLica.CurrentRow.Selected)
+            {
+                PravnoLicePregled izabranoPravno = dgvPravnaLica.CurrentRow.Tag as PravnoLicePregled;
+                // PravnoLiceIzmena forma = new PravnoLiceIzmena(izabranoPravno);
+                // forma.ShowDialog();
+                // KlijentiPregled_Load(sender, e);
+                return;
+            }
+
+            MessageBox.Show("Izaberite klijenta iz tabele.", "Napomena",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+>>>>>>> 154a2f87a754247d29ed0e41f97022490068d2bf
         }
     }
 }
