@@ -176,12 +176,11 @@ namespace Prodavnica.Forme
             }
         }
 
-<<<<<<< HEAD
         private void btnDodajKlijenta_Click(object sender, EventArgs e)
         {
             KlijentDodaj forma = new KlijentDodaj();
             forma.Show();
-=======
+        }
         private void btnIzmeniKorisnika_Click(object sender, EventArgs e)
         {
             if (dgvFizickaLica.CurrentRow != null && dgvFizickaLica.CurrentRow.Selected)
@@ -204,7 +203,6 @@ namespace Prodavnica.Forme
 
             MessageBox.Show("Izaberite klijenta iz tabele.", "Napomena",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
->>>>>>> 154a2f87a754247d29ed0e41f97022490068d2bf
         }
     }
 }
