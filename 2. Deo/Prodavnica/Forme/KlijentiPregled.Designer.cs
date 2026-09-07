@@ -155,7 +155,7 @@
             btnDodajKlijenta.ForeColor = Color.White;
             btnDodajKlijenta.Location = new Point(1017, 240);
             btnDodajKlijenta.Name = "btnDodajKlijenta";
-            btnDodajKlijenta.Size = new Size(223, 70);
+            btnDodajKlijenta.Size = new Size(229, 70);
             btnDodajKlijenta.TabIndex = 8;
             btnDodajKlijenta.Text = "Dodaj";
             btnDodajKlijenta.UseVisualStyleBackColor = false;
@@ -167,9 +167,9 @@
             btnIzmeniKorisnika.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
             btnIzmeniKorisnika.FlatStyle = FlatStyle.Flat;
             btnIzmeniKorisnika.ForeColor = Color.White;
-            btnIzmeniKorisnika.Location = new Point(1017, 315);
+            btnIzmeniKorisnika.Location = new Point(1017, 316);
             btnIzmeniKorisnika.Name = "btnIzmeniKorisnika";
-            btnIzmeniKorisnika.Size = new Size(223, 70);
+            btnIzmeniKorisnika.Size = new Size(230, 70);
             btnIzmeniKorisnika.TabIndex = 9;
             btnIzmeniKorisnika.Text = "Izmeni";
             btnIzmeniKorisnika.UseVisualStyleBackColor = false;
@@ -183,7 +183,7 @@
             btnObrisiKorisnika.ForeColor = Color.White;
             btnObrisiKorisnika.Location = new Point(1017, 392);
             btnObrisiKorisnika.Name = "btnObrisiKorisnika";
-            btnObrisiKorisnika.Size = new Size(223, 70);
+            btnObrisiKorisnika.Size = new Size(230, 70);
             btnObrisiKorisnika.TabIndex = 10;
             btnObrisiKorisnika.Text = "Obriši";
             btnObrisiKorisnika.UseVisualStyleBackColor = false;
@@ -194,9 +194,9 @@
             btnDetalji.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
             btnDetalji.FlatStyle = FlatStyle.Flat;
             btnDetalji.ForeColor = Color.White;
-            btnDetalji.Location = new Point(1017, 467);
+            btnDetalji.Location = new Point(1016, 468);
             btnDetalji.Name = "btnDetalji";
-            btnDetalji.Size = new Size(223, 70);
+            btnDetalji.Size = new Size(231, 70);
             btnDetalji.TabIndex = 11;
             btnDetalji.Text = "Detalji";
             btnDetalji.UseVisualStyleBackColor = false;
@@ -207,9 +207,9 @@
             btnOsvezi.FlatAppearance.BorderColor = Color.FromArgb(71, 71, 71);
             btnOsvezi.FlatStyle = FlatStyle.Flat;
             btnOsvezi.ForeColor = Color.White;
-            btnOsvezi.Location = new Point(1017, 543);
+            btnOsvezi.Location = new Point(1017, 544);
             btnOsvezi.Name = "btnOsvezi";
-            btnOsvezi.Size = new Size(223, 70);
+            btnOsvezi.Size = new Size(230, 70);
             btnOsvezi.TabIndex = 14;
             btnOsvezi.Text = "Osveži";
             btnOsvezi.UseVisualStyleBackColor = false;
@@ -397,7 +397,7 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(1011, 617);
+            label1.Location = new Point(1016, 617);
             label1.Name = "label1";
             label1.Size = new Size(107, 25);
             label1.TabIndex = 17;
@@ -407,7 +407,7 @@
             // 
             lblInfo.AutoSize = true;
             lblInfo.ForeColor = Color.White;
-            lblInfo.Location = new Point(1124, 617);
+            lblInfo.Location = new Point(1129, 617);
             lblInfo.Name = "lblInfo";
             lblInfo.Size = new Size(72, 25);
             lblInfo.TabIndex = 18;
@@ -423,9 +423,9 @@
             groupBoxPretraga.Controls.Add(txtBoxPretraga);
             groupBoxPretraga.Controls.Add(lblEmail);
             groupBoxPretraga.ForeColor = Color.White;
-            groupBoxPretraga.Location = new Point(1017, 17);
+            groupBoxPretraga.Location = new Point(1017, 15);
             groupBoxPretraga.Name = "groupBoxPretraga";
-            groupBoxPretraga.Size = new Size(229, 217);
+            groupBoxPretraga.Size = new Size(229, 219);
             groupBoxPretraga.TabIndex = 20;
             groupBoxPretraga.TabStop = false;
             groupBoxPretraga.Text = "Pretraga";

@@ -31,7 +31,7 @@
             gbTipKlijenta = new GroupBox();
             rbPravnoLice = new RadioButton();
             rbFizickoLice = new RadioButton();
-            gbPodaci = new GroupBox();
+            gbPodaciFizickoLice = new GroupBox();
             rtbKomentar = new RichTextBox();
             lblKomentar = new Label();
             tbEmail = new TextBox();
@@ -52,9 +52,25 @@
             lblPrezime = new Label();
             tbIme = new TextBox();
             lblIme = new Label();
+            gbPodaciPravnoLice = new GroupBox();
+            lblPIB = new Label();
+            rtbKomentarPravno = new RichTextBox();
+            lblKomentarPravno = new Label();
+            tbEmailPravno = new TextBox();
+            lblEmailPravno = new Label();
+            tbTelefonPravno = new TextBox();
+            lblTelefonPravno = new Label();
+            tbGradPravno = new TextBox();
+            lblGradPravno = new Label();
+            tbAdresaPravno = new TextBox();
+            lblAdresaPravno = new Label();
+            tbPIB = new TextBox();
+            tbNazivFirme = new TextBox();
+            lblNazivFirme = new Label();
             btnSacuvaj = new Button();
             gbTipKlijenta.SuspendLayout();
-            gbPodaci.SuspendLayout();
+            gbPodaciFizickoLice.SuspendLayout();
+            gbPodaciPravnoLice.SuspendLayout();
             SuspendLayout();
             // 
             // gbTipKlijenta
@@ -93,37 +109,38 @@
             rbFizickoLice.TabStop = true;
             rbFizickoLice.Text = "Fizičko lice";
             rbFizickoLice.UseVisualStyleBackColor = true;
+            rbFizickoLice.CheckedChanged += rbFizickoLice_CheckedChanged;
             // 
-            // gbPodaci
+            // gbPodaciFizickoLice
             // 
-            gbPodaci.Controls.Add(rtbKomentar);
-            gbPodaci.Controls.Add(lblKomentar);
-            gbPodaci.Controls.Add(tbEmail);
-            gbPodaci.Controls.Add(lblEmail);
-            gbPodaci.Controls.Add(tbTelefon);
-            gbPodaci.Controls.Add(lblTelefon);
-            gbPodaci.Controls.Add(tbGrad);
-            gbPodaci.Controls.Add(lblGrad);
-            gbPodaci.Controls.Add(tbAdresa);
-            gbPodaci.Controls.Add(lblAdresa);
-            gbPodaci.Controls.Add(lblDatumRodjenja);
-            gbPodaci.Controls.Add(dtpDatumRodjenja);
-            gbPodaci.Controls.Add(tbBrojLicneKarte);
-            gbPodaci.Controls.Add(lblBrojLicneKarte);
-            gbPodaci.Controls.Add(tbJMBG);
-            gbPodaci.Controls.Add(lblJMBG);
-            gbPodaci.Controls.Add(tbPrezime);
-            gbPodaci.Controls.Add(lblPrezime);
-            gbPodaci.Controls.Add(tbIme);
-            gbPodaci.Controls.Add(lblIme);
-            gbPodaci.Location = new Point(17, 117);
-            gbPodaci.Margin = new Padding(4, 5, 4, 5);
-            gbPodaci.Name = "gbPodaci";
-            gbPodaci.Padding = new Padding(4, 5, 4, 5);
-            gbPodaci.Size = new Size(816, 343);
-            gbPodaci.TabIndex = 1;
-            gbPodaci.TabStop = false;
-            gbPodaci.Text = "Podaci";
+            gbPodaciFizickoLice.Controls.Add(rtbKomentar);
+            gbPodaciFizickoLice.Controls.Add(lblKomentar);
+            gbPodaciFizickoLice.Controls.Add(tbEmail);
+            gbPodaciFizickoLice.Controls.Add(lblEmail);
+            gbPodaciFizickoLice.Controls.Add(tbTelefon);
+            gbPodaciFizickoLice.Controls.Add(lblTelefon);
+            gbPodaciFizickoLice.Controls.Add(tbGrad);
+            gbPodaciFizickoLice.Controls.Add(lblGrad);
+            gbPodaciFizickoLice.Controls.Add(tbAdresa);
+            gbPodaciFizickoLice.Controls.Add(lblAdresa);
+            gbPodaciFizickoLice.Controls.Add(lblDatumRodjenja);
+            gbPodaciFizickoLice.Controls.Add(dtpDatumRodjenja);
+            gbPodaciFizickoLice.Controls.Add(tbBrojLicneKarte);
+            gbPodaciFizickoLice.Controls.Add(lblBrojLicneKarte);
+            gbPodaciFizickoLice.Controls.Add(tbJMBG);
+            gbPodaciFizickoLice.Controls.Add(lblJMBG);
+            gbPodaciFizickoLice.Controls.Add(tbPrezime);
+            gbPodaciFizickoLice.Controls.Add(lblPrezime);
+            gbPodaciFizickoLice.Controls.Add(tbIme);
+            gbPodaciFizickoLice.Controls.Add(lblIme);
+            gbPodaciFizickoLice.Location = new Point(17, 117);
+            gbPodaciFizickoLice.Margin = new Padding(4, 5, 4, 5);
+            gbPodaciFizickoLice.Name = "gbPodaciFizickoLice";
+            gbPodaciFizickoLice.Padding = new Padding(4, 5, 4, 5);
+            gbPodaciFizickoLice.Size = new Size(816, 343);
+            gbPodaciFizickoLice.TabIndex = 1;
+            gbPodaciFizickoLice.TabStop = false;
+            gbPodaciFizickoLice.Text = "Podaci o fizičkom licu";
             // 
             // rtbKomentar
             // 
@@ -151,7 +168,6 @@
             tbEmail.Name = "tbEmail";
             tbEmail.Size = new Size(255, 31);
             tbEmail.TabIndex = 17;
-            tbEmail.KeyPress += tbEmail_KeyPress;
             // 
             // lblEmail
             // 
@@ -314,6 +330,157 @@
             lblIme.TabIndex = 0;
             lblIme.Text = "Ime:";
             // 
+            // gbPodaciPravnoLice
+            // 
+            gbPodaciPravnoLice.Controls.Add(lblPIB);
+            gbPodaciPravnoLice.Controls.Add(rtbKomentarPravno);
+            gbPodaciPravnoLice.Controls.Add(lblKomentarPravno);
+            gbPodaciPravnoLice.Controls.Add(tbEmailPravno);
+            gbPodaciPravnoLice.Controls.Add(lblEmailPravno);
+            gbPodaciPravnoLice.Controls.Add(tbTelefonPravno);
+            gbPodaciPravnoLice.Controls.Add(lblTelefonPravno);
+            gbPodaciPravnoLice.Controls.Add(tbGradPravno);
+            gbPodaciPravnoLice.Controls.Add(lblGradPravno);
+            gbPodaciPravnoLice.Controls.Add(tbAdresaPravno);
+            gbPodaciPravnoLice.Controls.Add(lblAdresaPravno);
+            gbPodaciPravnoLice.Controls.Add(tbPIB);
+            gbPodaciPravnoLice.Controls.Add(tbNazivFirme);
+            gbPodaciPravnoLice.Controls.Add(lblNazivFirme);
+            gbPodaciPravnoLice.Location = new Point(17, 117);
+            gbPodaciPravnoLice.Margin = new Padding(4, 5, 4, 5);
+            gbPodaciPravnoLice.Name = "gbPodaciPravnoLice";
+            gbPodaciPravnoLice.Padding = new Padding(4, 5, 4, 5);
+            gbPodaciPravnoLice.Size = new Size(816, 343);
+            gbPodaciPravnoLice.TabIndex = 20;
+            gbPodaciPravnoLice.TabStop = false;
+            gbPodaciPravnoLice.Text = "Podaci o pravnom licu";
+            // 
+            // lblPIB
+            // 
+            lblPIB.AutoSize = true;
+            lblPIB.Location = new Point(100, 90);
+            lblPIB.Name = "lblPIB";
+            lblPIB.Size = new Size(41, 25);
+            lblPIB.TabIndex = 20;
+            lblPIB.Text = "PIB:";
+            // 
+            // rtbKomentarPravno
+            // 
+            rtbKomentarPravno.Location = new Point(548, 184);
+            rtbKomentarPravno.Margin = new Padding(4, 5, 4, 5);
+            rtbKomentarPravno.Name = "rtbKomentarPravno";
+            rtbKomentarPravno.Size = new Size(255, 132);
+            rtbKomentarPravno.TabIndex = 19;
+            rtbKomentarPravno.Text = "";
+            // 
+            // lblKomentarPravno
+            // 
+            lblKomentarPravno.AutoSize = true;
+            lblKomentarPravno.Location = new Point(449, 187);
+            lblKomentarPravno.Margin = new Padding(4, 0, 4, 0);
+            lblKomentarPravno.Name = "lblKomentarPravno";
+            lblKomentarPravno.Size = new Size(93, 25);
+            lblKomentarPravno.TabIndex = 18;
+            lblKomentarPravno.Text = "Komentar:";
+            // 
+            // tbEmailPravno
+            // 
+            tbEmailPravno.Location = new Point(548, 135);
+            tbEmailPravno.Margin = new Padding(4, 5, 4, 5);
+            tbEmailPravno.Name = "tbEmailPravno";
+            tbEmailPravno.Size = new Size(255, 31);
+            tbEmailPravno.TabIndex = 17;
+            // 
+            // lblEmailPravno
+            // 
+            lblEmailPravno.AutoSize = true;
+            lblEmailPravno.Location = new Point(482, 138);
+            lblEmailPravno.Margin = new Padding(4, 0, 4, 0);
+            lblEmailPravno.Name = "lblEmailPravno";
+            lblEmailPravno.Size = new Size(58, 25);
+            lblEmailPravno.TabIndex = 16;
+            lblEmailPravno.Text = "Email:";
+            // 
+            // tbTelefonPravno
+            // 
+            tbTelefonPravno.Location = new Point(548, 87);
+            tbTelefonPravno.Margin = new Padding(4, 5, 4, 5);
+            tbTelefonPravno.Name = "tbTelefonPravno";
+            tbTelefonPravno.Size = new Size(255, 31);
+            tbTelefonPravno.TabIndex = 15;
+            // 
+            // lblTelefonPravno
+            // 
+            lblTelefonPravno.AutoSize = true;
+            lblTelefonPravno.Location = new Point(468, 90);
+            lblTelefonPravno.Margin = new Padding(4, 0, 4, 0);
+            lblTelefonPravno.Name = "lblTelefonPravno";
+            lblTelefonPravno.Size = new Size(72, 25);
+            lblTelefonPravno.TabIndex = 14;
+            lblTelefonPravno.Text = "Telefon:";
+            // 
+            // tbGradPravno
+            // 
+            tbGradPravno.Location = new Point(548, 39);
+            tbGradPravno.Margin = new Padding(4, 5, 4, 5);
+            tbGradPravno.Name = "tbGradPravno";
+            tbGradPravno.Size = new Size(255, 31);
+            tbGradPravno.TabIndex = 13;
+            // 
+            // lblGradPravno
+            // 
+            lblGradPravno.AutoSize = true;
+            lblGradPravno.Location = new Point(486, 42);
+            lblGradPravno.Margin = new Padding(4, 0, 4, 0);
+            lblGradPravno.Name = "lblGradPravno";
+            lblGradPravno.Size = new Size(54, 25);
+            lblGradPravno.TabIndex = 12;
+            lblGradPravno.Text = "Grad:";
+            // 
+            // tbAdresaPravno
+            // 
+            tbAdresaPravno.Location = new Point(149, 135);
+            tbAdresaPravno.Margin = new Padding(4, 5, 4, 5);
+            tbAdresaPravno.Name = "tbAdresaPravno";
+            tbAdresaPravno.Size = new Size(255, 31);
+            tbAdresaPravno.TabIndex = 11;
+            // 
+            // lblAdresaPravno
+            // 
+            lblAdresaPravno.AutoSize = true;
+            lblAdresaPravno.Location = new Point(70, 136);
+            lblAdresaPravno.Margin = new Padding(4, 0, 4, 0);
+            lblAdresaPravno.Name = "lblAdresaPravno";
+            lblAdresaPravno.Size = new Size(71, 25);
+            lblAdresaPravno.TabIndex = 10;
+            lblAdresaPravno.Text = "Adresa:";
+            // 
+            // tbPIB
+            // 
+            tbPIB.Location = new Point(149, 87);
+            tbPIB.Margin = new Padding(4, 5, 4, 5);
+            tbPIB.Name = "tbPIB";
+            tbPIB.Size = new Size(255, 31);
+            tbPIB.TabIndex = 3;
+            // 
+            // tbNazivFirme
+            // 
+            tbNazivFirme.Location = new Point(149, 39);
+            tbNazivFirme.Margin = new Padding(4, 5, 4, 5);
+            tbNazivFirme.Name = "tbNazivFirme";
+            tbNazivFirme.Size = new Size(255, 31);
+            tbNazivFirme.TabIndex = 1;
+            // 
+            // lblNazivFirme
+            // 
+            lblNazivFirme.AutoSize = true;
+            lblNazivFirme.Location = new Point(36, 42);
+            lblNazivFirme.Margin = new Padding(4, 0, 4, 0);
+            lblNazivFirme.Name = "lblNazivFirme";
+            lblNazivFirme.Size = new Size(105, 25);
+            lblNazivFirme.TabIndex = 0;
+            lblNazivFirme.Text = "Naziv firme:";
+            // 
             // btnSacuvaj
             // 
             btnSacuvaj.Location = new Point(721, 474);
@@ -322,22 +489,26 @@
             btnSacuvaj.TabIndex = 2;
             btnSacuvaj.Text = "Sačuvaj";
             btnSacuvaj.UseVisualStyleBackColor = true;
+            btnSacuvaj.Click += btnSacuvaj_Click;
             // 
             // KlijentDodaj
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(850, 520);
+            Controls.Add(gbPodaciPravnoLice);
             Controls.Add(btnSacuvaj);
-            Controls.Add(gbPodaci);
+            Controls.Add(gbPodaciFizickoLice);
             Controls.Add(gbTipKlijenta);
             Margin = new Padding(4, 5, 4, 5);
             Name = "KlijentDodaj";
             Text = "KlijentDodaj";
             gbTipKlijenta.ResumeLayout(false);
             gbTipKlijenta.PerformLayout();
-            gbPodaci.ResumeLayout(false);
-            gbPodaci.PerformLayout();
+            gbPodaciFizickoLice.ResumeLayout(false);
+            gbPodaciFizickoLice.PerformLayout();
+            gbPodaciPravnoLice.ResumeLayout(false);
+            gbPodaciPravnoLice.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -346,7 +517,7 @@
         private GroupBox gbTipKlijenta;
         private RadioButton rbPravnoLice;
         private RadioButton rbFizickoLice;
-        private GroupBox gbPodaci;
+        private GroupBox gbPodaciFizickoLice;
         private Label lblIme;
         private TextBox tbPrezime;
         private Label lblPrezime;
@@ -368,5 +539,27 @@
         private RichTextBox rtbKomentar;
         private Label lblKomentar;
         private Button btnSacuvaj;
+        private GroupBox gbPodaciPravnoLice;
+        private RichTextBox rtbKomentarPravno;
+        private Label lblKomentarPravno;
+        private TextBox tbEmailPravno;
+        private Label lblEmailPravno;
+        private TextBox tbTelefonPravno;
+        private Label lblTelefonPravno;
+        private TextBox tbGradPravno;
+        private Label lblGradPravno;
+        private TextBox tbAdresaPravno;
+        private Label lblAdresaPravno;
+        private Label label6;
+        private DateTimePicker dateTimePicker1;
+        private TextBox textBox5;
+        private Label label7;
+        private TextBox textBox6;
+        private Label label8;
+        private TextBox tbPIB;
+        private Label label9;
+        private TextBox tbNazivFirme;
+        private Label lblNazivFirme;
+        private Label lblPIB;
     }
 }

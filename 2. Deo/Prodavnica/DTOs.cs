@@ -4,7 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Prodavnica {
+namespace Prodavnica
+{
+
+    enum KlijentStatus 
+    {
+        Aktivan,
+        Neaktivan
+    }
+
     #region FizickoLice
     public class FizickoLicePregled
     {

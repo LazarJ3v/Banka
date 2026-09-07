@@ -1,12 +1,13 @@
 ﻿using NHibernate;
+using NHibernate.Linq;
+using NHibernate.Proxy;
+using Prodavnica.Entiteti;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NHibernate.Linq;
-using Prodavnica.Entiteti;
+using System.Transactions;
 using System.Windows.Forms;
-using NHibernate.Proxy;
 
 namespace Prodavnica
 {
@@ -39,7 +40,17 @@ namespace Prodavnica
             }
             catch (Exception ec)
             {
-                MessageBox.Show(ec.Message);
+                //MessageBox.Show(ec.Message);
+
+                string poruka = ec.Message;
+                Exception inner = ec.InnerException;
+                while (inner != null)
+                {
+                    poruka += "\n\n---\n" + inner.Message;
+                    inner = inner.InnerException;
+                }
+
+                MessageBox.Show(poruka, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public static FizickoLiceBasic VratiFizickoLice(int id)
